@@ -13,4 +13,4 @@ def NaiveBayes(dataset):
     
     predictions = classifier.predict(att_test)
 
-    print(accuracy_score(class_test, predictions))    
+    print('Naive Bayes: ', accuracy_score(class_test, predictions), '\n')    

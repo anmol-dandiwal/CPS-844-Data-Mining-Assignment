@@ -16,7 +16,7 @@ def LogRegression(dataset):
 
     classifier = LogisticRegression()
     classifier.fit(att_train, class_train)
-    
+
     predictions = classifier.predict(att_test)
 
-    print(accuracy_score(class_test, predictions))
+    print('Logistic Regression: ', accuracy_score(class_test, predictions), '\n')

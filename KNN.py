@@ -21,4 +21,4 @@ def KNearestNeighbours(dataset, k):
 
     print('Confusion Matrix:\n', confusion_matrix(class_test, predictions), '\n')
     print(classification_report(class_test, predictions))
-    print('F1 Score: ', f1_score(class_test, predictions))
+    print('F1 Score: ', f1_score(class_test, predictions), '\n')
