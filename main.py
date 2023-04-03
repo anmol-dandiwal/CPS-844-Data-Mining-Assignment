@@ -1,9 +1,14 @@
 #!/usr/bin/python
-from KNN import kNearestNeighbours
+from KNN import KNearestNeighbours
+import pandas as pd
 
 def main():
+    url = 'pulsars.csv'
+    names = ['att1', 'att2', 'att3', 'att4', 'att5', 'att6', 'att7', 'att8', 'Class']
+    dataset = pd.read_csv(url, names=names)
+
     # After checking all values for k from 1-10, 5 was most accurate
-    kNearestNeighbours(5)
+    KNearestNeighbours(dataset, 5)
 
 if __name__ == '__main__':
     main()

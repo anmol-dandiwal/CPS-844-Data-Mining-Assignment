@@ -5,16 +5,12 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import f1_score, confusion_matrix, classification_report
 import pandas as pd 
 
-def kNearestNeighbours(k):
-    url = 'pulsars.csv'
-    names = ['att1', 'att2', 'att3', 'att4', 'att5', 'att6', 'att7', 'att8', 'Class']
-    dataset = pd.read_csv(url, names=names)
-
+def KNearestNeighbours(dataset, k):
     atrributes = dataset.iloc[:, :-1]
     classes = dataset.iloc[:, 8]
     att_train, att_test, class_train, class_test = train_test_split(atrributes, classes, test_size=0.20)
-    scaler = StandardScaler()
     
+    scaler = StandardScaler()
     scaler.fit(att_train)
     att_train = scaler.transform(att_train)
     att_test = scaler.transform(att_test)
