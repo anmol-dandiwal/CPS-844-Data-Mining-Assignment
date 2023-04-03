@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from KNN import KNearestNeighbours
 from NaiveBayes import NaiveBayes
+from LogRegression import LogRegression
 import pandas as pd
 
 def main():
@@ -10,8 +11,8 @@ def main():
 
     # After checking all values for k from 1-10, 5 was most accurate
     KNearestNeighbours(dataset, 5)
-
-    NaiveBayes(dataset)    
+    NaiveBayes(dataset)
+    LogRegression(dataset)
 
 if __name__ == '__main__':
     main()
