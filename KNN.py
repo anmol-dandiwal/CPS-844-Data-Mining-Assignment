@@ -19,6 +19,6 @@ def KNearestNeighbours(dataset, k):
 
     predictions = classifier.predict(att_test)
 
-    print('Confusion Matrix:\n', confusion_matrix(class_test, predictions), '\n')
+    print('Nearest Neighbour (k =',k,')\nConfusion Matrix:\n',confusion_matrix(class_test, predictions),'\n')
     print(classification_report(class_test, predictions))
-    print('F1 Score: ', f1_score(class_test, predictions), '\n')
+    print('F1 Score: ',f1_score(class_test, predictions),'\n')

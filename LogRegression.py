@@ -19,4 +19,4 @@ def LogRegression(dataset):
 
     predictions = classifier.predict(att_test)
 
-    print('Logistic Regression: ', accuracy_score(class_test, predictions), '\n')
+    print('Logistic Regression: ',accuracy_score(class_test, predictions),'\n')

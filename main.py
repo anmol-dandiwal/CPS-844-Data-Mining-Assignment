@@ -2,6 +2,7 @@
 from KNN import KNearestNeighbours
 from NaiveBayes import NaiveBayes
 from LogRegression import LogRegression
+from DecisionTree import DecisionTree
 import pandas as pd
 
 def main():
@@ -13,6 +14,7 @@ def main():
     KNearestNeighbours(dataset, 5)
     NaiveBayes(dataset)
     LogRegression(dataset)
+    DecisionTree(dataset)
 
 if __name__ == '__main__':
     main()
