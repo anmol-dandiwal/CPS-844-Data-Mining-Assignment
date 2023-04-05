@@ -1,16 +1,13 @@
 #!/usr/bin/python
-from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import f1_score, confusion_matrix, classification_report
 
-def NaiveBayes(dataset):
-    atrributes = dataset.iloc[:, :-1]
-    classes = dataset.iloc[:, 8]
-    att_train, att_test, class_train, class_test = train_test_split(atrributes, classes, test_size=0.25)
-
+def NaiveBayes(att_train, att_test, class_train, class_test):
     classifier = GaussianNB()
     classifier.fit(att_train, class_train)
     
     predictions = classifier.predict(att_test)
 
-    print('Naive Bayes: ',accuracy_score(class_test, predictions),'\n')    
+    print('Naive Bayes: \nConfusion Matrix:\n',confusion_matrix(class_test, predictions),'\n')
+    print(classification_report(class_test, predictions))
+    print('F1 Score: ',f1_score(class_test, predictions),'\n\n')
