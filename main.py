@@ -1,11 +1,11 @@
 #!/usr/bin/python
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from KNN import KNearestNeighbours
-from NaiveBayes import NaiveBayes
-from LogRegression import LogRegression
-from DecisionTree import DecisionTree
-from SVM import SVM
+from Classifiers.KNN import KNearestNeighbours
+from Classifiers.NaiveBayes import NaiveBayes
+from Classifiers.LogRegression import LogRegression
+from Classifiers.DecisionTree import DecisionTree
+from Classifiers.SVM import SVM
 import pandas as pd
 
 def main():
