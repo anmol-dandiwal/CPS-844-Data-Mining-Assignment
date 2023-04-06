@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Load the dataset
-url = "../pulsars.csv"
+url = "pulsars.csv"
 df = pd.read_csv(url, header=None)
 
 X = df.iloc[:, :-1]
