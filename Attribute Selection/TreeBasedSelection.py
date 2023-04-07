@@ -3,7 +3,7 @@ from sklearn.feature_selection import SelectFromModel
 import pandas as pd
 
 # Load the dataset
-url = "../pulsars.csv"
+url = "pulsars.csv"
 df = pd.read_csv(url, header=None)
 
 # Split the dataset into input features and target variable
