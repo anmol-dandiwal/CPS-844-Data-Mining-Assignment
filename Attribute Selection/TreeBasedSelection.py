@@ -1,6 +1,6 @@
-import pandas as pd
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.feature_selection import SelectFromModel
+import pandas as pd
 
 # Load the dataset
 url = "../pulsars.csv"
@@ -21,3 +21,9 @@ X_new = model.transform(X)
 # Print the selected features
 selected_features = X.columns[model.get_support()]
 print("Selected features:", selected_features)
+#export the selected columns to another .csv
+selected_features = selected_features
+selected_data = df[selected_features]
+print(selected_features)
+
+selected_data.to_csv("treeBasedSelectionData.csv", index=False)

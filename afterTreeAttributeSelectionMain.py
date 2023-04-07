@@ -8,13 +8,15 @@ from Classifiers.DecisionTree import DecisionTree
 from Classifiers.SVM import SVM
 import pandas as pd
 
+#IP = Integrated Profile
 def main():
-    url = 'pulsars.csv'
-    names = ['Mean of the IP', 'Standard deviation of IP', 'Excess kurtosis IP', 'Skewness of IP', 'Mean of the DM-SNR', 'Standard deviation of DM-SNR', 'Excess kurtosis of DM-SNR', 'Skewness of DM-SNR', 'Class']
+    url = 'treeBasedSelectionPulsar.csv'
+    # Names for [0, 2, 3]
+    names = ['Mean of IP', 'Excess kurtosis of IP', 'Skewness of IP', 'Class']
     dataset = pd.read_csv(url, names=names)
 
     atrributes = dataset.iloc[:, :-1]
-    classes = dataset.iloc[:, 8]
+    classes = dataset.iloc[:, 3]
     att_train, att_test, class_train, class_test = train_test_split(atrributes, classes, test_size=0.25)
 
     scaler = StandardScaler()
